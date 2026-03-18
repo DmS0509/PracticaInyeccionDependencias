@@ -1,8 +1,14 @@
 package com.example02.example02.di_attribute;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Editorial {
 
+    @Value("1")
     private Integer id;
+    @Value("Uptc")
     private String name;
 
     public Editorial(){
