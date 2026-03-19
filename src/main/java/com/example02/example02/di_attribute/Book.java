@@ -1,5 +1,6 @@
 package com.example02.example02.di_attribute;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -10,16 +11,14 @@ public class Book {
     private String title;
     private Editorial editorial;
 
-    public Book(@Value("1") Integer id, @Value("Metamodelos") String title, Editorial editorial) {
-        this.id = id;
-        this.title = title;
-        this.editorial = editorial;
+    public Book() {
     }
 
     public Integer getId() {
         return id;
     }
 
+    @Value("1")
     public void setId(Integer id) {
         this.id = id;
     }
@@ -28,6 +27,7 @@ public class Book {
         return title;
     }
 
+    @Value("Metamodelos")
     public void setTitle(String title) {
         this.title = title;
     }
@@ -36,6 +36,7 @@ public class Book {
         return editorial;
     }
 
+    @Autowired
     public void setEditorial(Editorial editorial) {
         this.editorial = editorial;
     }

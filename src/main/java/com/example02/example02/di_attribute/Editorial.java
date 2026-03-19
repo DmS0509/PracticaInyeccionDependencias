@@ -9,15 +9,15 @@ public class Editorial {
     private Integer id;
     private String name;
 
-    public Editorial(@Value("1") Integer id, @Value("Uptc") String name) {
-        this.id = id;
-        this.name = name;
+    public Editorial(){
+
     }
 
     public Integer getId() {
         return id;
     }
 
+    @Value("1")
     public void setId(Integer id) {
         this.id = id;
     }
@@ -26,6 +26,7 @@ public class Editorial {
         return name;
     }
 
+    @Value("Uptc")
     public void setName(String name) {
         this.name = name;
     }
