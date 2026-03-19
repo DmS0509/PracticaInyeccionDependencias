@@ -6,16 +6,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class Editorial {
 
-    @Value("1")
     private Integer id;
-    @Value("Uptc")
     private String name;
 
-    public Editorial(){
-
-    }
-
-    public Editorial(Integer id, String name) {
+    public Editorial(@Value("1") Integer id, @Value("Uptc") String name) {
         this.id = id;
         this.name = name;
     }
